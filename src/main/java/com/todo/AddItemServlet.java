@@ -15,8 +15,10 @@ import java.io.IOException;
 
 @WebServlet(name = "addItemServlet", value = "/addItem")
 public class AddItemServlet extends HttpServlet {
-
-    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
+    public AddItemServlet() {
+        super();
+    }
+    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("ToDoListDB");
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -39,7 +41,7 @@ public class AddItemServlet extends HttpServlet {
             em.close();
         }
 
-        // Redirect back to the main list page
+
         resp.sendRedirect("index.jsp");
     }
 }

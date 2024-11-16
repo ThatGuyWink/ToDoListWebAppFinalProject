@@ -1,4 +1,4 @@
-package com.cen4025c.todolistwebapp;
+package com.todo;
 
 import java.io.*;
 
