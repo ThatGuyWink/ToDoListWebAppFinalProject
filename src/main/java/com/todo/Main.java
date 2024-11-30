@@ -18,7 +18,7 @@ public class Main {
         boolean running = true;
 
         while (running) {
-            System.out.println("\n--- To Do List Application ---");
+            System.out.println("\n--- Justin's To Do List Application ---");
             System.out.println("1. Add an Item");
             System.out.println("2. Delete an Item");
             System.out.println("3. View All Items");
