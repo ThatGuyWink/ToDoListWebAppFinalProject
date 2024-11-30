@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Main {
 
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
-    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
+    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("ToDoListDB");
 
     public static void main(String[] args) {
         logger.info("Starting Justin's To-Do List application...");
