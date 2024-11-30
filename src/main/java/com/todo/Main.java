@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 
+import java.io.File;
 import java.util.List;
 import java.util.Scanner;
 
@@ -18,8 +19,19 @@ public class Main {
     private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("ToDoListDB");
 
     public static void main(String[] args) {
-        MDC.put("application", "ToDoListApp"); // Add application-wide context
+        File logsDir = new File("logs");
+        if (!logsDir.exists()) {
+            boolean created = logsDir.mkdirs();
+            if (created) {
+                System.out.println("Logs directory created successfully.");
+            } else {
+                System.err.println("Failed to create logs directory.");
+            }
+        }
+
+        MDC.put("application", "ToDoListApp"); // Add global context for application
         logger.info("Starting Justin's To-Do List application...");
+
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
