@@ -5,17 +5,19 @@
         </encoder>
     </appender>
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>/Users/justinwinkler/.jenkins/workspace/FinalProject/logs/todolist.log</file>
+        <file>logs/todolist.log</file> 
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
     <appender name="JSON_FILE" class="ch.qos.logback.core.FileAppender">
-        <file>/Users/justinwinkler/.jenkins/workspace/FinalProject/logs/todolist.json</file>
+        <file>logs/todolist.json</file> 
         <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
     </appender>
     <root level="info">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />
+        <appender-ref ref="JSON_FILE" />
     </root>
 </configuration>
+
