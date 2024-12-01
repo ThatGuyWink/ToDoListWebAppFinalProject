@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Justin's To-Do List</title>
+    <title>Justin's To Do List</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
